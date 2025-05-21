@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 성적 계산기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>학생 성적 계산기</h1>
+        <div class="header-actions">
+            <button id="add-course-btn" class="primary-btn">과목 추가</button>
+            <div class="dropdown">
+                <button id="options-btn" class="secondary-btn">더보기</button>
+                <div class="dropdown-content">
+                    <button id="export-btn">데이터 내보내기</button>
+                    <button id="import-btn">데이터 가져오기</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="courses-container">
+        <!-- 여기에 과목 카드가 동적으로 추가됩니다 -->
+        <div class="empty-state">
+            <p>과목 추가 버튼을 눌러 과목을 추가해보세요.</p>
+        </div>
+    </main>
+
+    <footer id="total-stats">
+        <div class="stats-content">
+            <div class="stat-item">
+                <span>총 과목 수:</span>
+                <span id="total-courses">0</span>
+            </div>
+            <div class="stat-item">
+                <span>전체 평균:</span>
+                <span id="total-average">0.0</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <input type="file" id="import-file" accept=".json" style="display: none;">
+    
+    <script src="main.js"></script>
+</body>
+</html> 
